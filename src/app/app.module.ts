@@ -8,6 +8,14 @@ import { LandingComponent } from './landingPage/landing.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryEdit } from './gallery/gallery-edit/gallery-edit.component';
 import { GalleryView } from './gallery/gallery-view/gallery-view.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRouters: Routes =[
+  { path:'', component: LandingComponent },
+  { path:'gallery', component: GalleryComponent },
+  { path:'login', component: AuthComponent },
+
+];
 
 @NgModule({
   declarations: [
@@ -21,7 +29,8 @@ import { GalleryView } from './gallery/gallery-view/gallery-view.component';
   imports: [
     BrowserModule, 
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRouters)
   ],
   providers: [Image],
   bootstrap: [AppComponent]
