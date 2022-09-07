@@ -1,0 +1,31 @@
+<div class="container">
+    <form [formGroup]="editForm">
+        <div>
+            <label for="name">Image Name</label>
+            <input 
+            type="text"
+            id="name"
+            formControlName="imageName" 
+            class="form-control">
+        </div>
+        <div>
+            <label for="link">Image link</label>
+            <input 
+            type="text" 
+            id="imageLink"
+            formControlName="imageLink"
+            class="form-control">
+        </div>
+        <div>
+            <label for="details">Image Name</label>
+            <textarea 
+            name="details" 
+            id="details" 
+            formControlName="details"
+            class="form-control"></textarea>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </form>
+</div>

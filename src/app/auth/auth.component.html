@@ -15,21 +15,33 @@
                 ngModel
                 >
             </div>
-            <div>
+            <div *ngIf="!isLogin">
+                <label for="name">Name</label>
+                <input 
+                type="string" 
+                id="name" 
+                name="name" 
+                class="form-control" 
+                ngModel>
+            </div>
+            <div >
                 <label for="email">Password</label>
                 <input 
-                type="text"
+                type="password"
                 id="Password"
                 name="Password"
                 class="form-control"
                 ngModel>
             </div>
             <div>
-                <button type="submit" class="btn btn-primary">login</button>
+                <button type="submit" class="btn btn-primary">{{isLogin ? "login":"singUp"}}</button>
+                
             </div>
             <div>
                 <p>Do not have account?</p>
-                <a >sign up</a>
+                <a type="submit" (click)="onPress()">switch to {{isLogin ? "singUp":"login"}}</a>
+                <p>{{email}}</p>
+                <p>{{name}}</p>
             </div>
         </form>
     </div>
