@@ -23,7 +23,7 @@ import { GalleryView } from './gallery/gallery-view/gallery-view.component';
     FormsModule, 
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [Image],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

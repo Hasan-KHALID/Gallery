@@ -5,6 +5,6 @@ import { Component } from "@angular/core"
 })
 
 export class LandingComponent{
-    image: string = "../Photo/image.svg"
+    
 
 }
