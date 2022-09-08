@@ -9,11 +9,15 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryEdit } from './gallery/gallery-edit/gallery-edit.component';
 import { GalleryView } from './gallery/gallery-view/gallery-view.component';
 import { Routes, RouterModule } from '@angular/router';
+import { HeadingComponent } from './heading/heading.component';
+import { FullscreenComponent } from './fullscreen/fullscreen.component';
+import { GalleryService } from './gallery/gallery.service';
 
 const appRouters: Routes =[
   { path:'', component: LandingComponent },
   { path:'gallery', component: GalleryComponent },
   { path:'login', component: AuthComponent },
+  { path:'fullscreen', component: FullscreenComponent },
 
 ];
 
@@ -24,7 +28,9 @@ const appRouters: Routes =[
     LandingComponent,
     GalleryComponent,
     GalleryEdit,
-    GalleryView
+    GalleryView,
+    HeadingComponent,
+    FullscreenComponent
   ],
   imports: [
     BrowserModule, 
@@ -32,7 +38,7 @@ const appRouters: Routes =[
     ReactiveFormsModule,
     RouterModule.forRoot(appRouters)
   ],
-  providers: [Image],
+  providers: [Image,GalleryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

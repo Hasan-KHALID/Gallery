@@ -1,6 +1,6 @@
 <div class="container">
     <div>
-        <h1>Login</h1>
+        <h1>{{isLogin ? "login":"singUp"}}</h1>
     </div>
     <div>
         <form (ngSubmit)="onSubmit(authForm)" #authForm = "ngForm" >
@@ -34,12 +34,12 @@
                 ngModel>
             </div>
             <div>
-                <button type="submit" class="btn btn-primary" routerLink="/gallery" >{{isLogin ? "login":"singUp"}}</button>
+                <button type="submit" class="btn btn-primary"  >{{isLogin ? "login":"singUp"}}</button>
                 
             </div>
             <div>
                 <p>Do not have account?</p>
-                <a type="submit" (click)="onPress()">switch to {{isLogin ? "singUp":"login"}}</a>
+                <a type="button" (click)="onPress()" class="btn btn-primary">switch to {{isLogin ? "singUp":"login"}}</a>
                 <p>{{email}}</p>
                 <p>{{name}}</p>
             </div>
