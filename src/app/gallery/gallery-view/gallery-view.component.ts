@@ -11,6 +11,7 @@ import { Image } from "../image.module";
 })
 export class GalleryView implements OnInit{
     image!: Image[];
+    fullScreenMode = false;
    
     
     
@@ -25,14 +26,9 @@ export class GalleryView implements OnInit{
         
     }
 
-    onLoad(url:string, name:string ){
-        const imageUrl = url;
-        const imageName= name;
-        this.galleryService.fullScreen(imageUrl, imageName);
-        console.log(imageName)
-        console.log(imageUrl)
-
-        this.router.navigate(['/fullscreen']);
+    onLoad(){
+        
+        this.fullScreenMode = true;
     }
     
 

@@ -7,8 +7,12 @@
                 <h5 class="card-title">{{img.name}}</h5>
                 <p class="card-text">{{img.details}}
                 </p>
-                <a class="btn btn-primary" (click)="onLoad(img.imageUrl, img.name)" >view fullscreen</a>
+                <a class="btn btn-primary" (click)="onLoad()" >view fullscreen</a>
             </div>
+        </div>
+
+        <div>
+            <app-view-fullScreen *ngIf="fullScreenMode" [imagePath]="img.imageUrl"></app-view-fullScreen>
         </div>
     </div>
 

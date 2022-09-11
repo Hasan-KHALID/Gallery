@@ -12,6 +12,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeadingComponent } from './heading/heading.component';
 import { FullscreenComponent } from './fullscreen/fullscreen.component';
 import { GalleryService } from './gallery/gallery.service';
+import { ViewFullScreen } from './gallery/gallery-view/view-fullScreen/view-fullScreen';
 
 const appRouters: Routes =[
   { path:'', component: LandingComponent },
@@ -30,7 +31,8 @@ const appRouters: Routes =[
     GalleryEdit,
     GalleryView,
     HeadingComponent,
-    FullscreenComponent
+    FullscreenComponent,
+    ViewFullScreen
   ],
   imports: [
     BrowserModule, 
