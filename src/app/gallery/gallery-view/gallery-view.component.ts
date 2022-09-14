@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { Router } from "@angular/router";
 import { GalleryService } from "../gallery.service";
 import { Image } from "../image.module";
@@ -12,6 +12,14 @@ import { Image } from "../image.module";
 export class GalleryView implements OnInit{
     image!: Image[];
     fullScreenMode = false;
+    @Output()fullScree = new EventEmitter<boolean>();
+
+     viewFullScreen(){
+
+        
+     }
+
+    
    
     
     
