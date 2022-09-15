@@ -2,6 +2,7 @@ import { Injectable, OnInit } from "@angular/core"
 import { Image } from "./image.module"
 
 @Injectable()
+
 export class GalleryService implements OnInit{
     imageUrl !:string;
     names !:string ;
